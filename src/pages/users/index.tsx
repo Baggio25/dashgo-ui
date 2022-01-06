@@ -51,18 +51,15 @@ export default function UserList() {
           <Table colorScheme="whiteAlpha">
             <Thead>
               <Tr>
-                <Th>Ativo</Th>
                 <Th>Usuário</Th>
                 <Th>Data de Cadastro</Th>
+                <Th></Th>
                 <Th width="8"></Th>
               </Tr>
             </Thead>
             <Tbody>
               <Tr>
                 <Td>
-                  <Checkbox colorScheme="pink" defaultIsChecked />
-                </Td>
-                <Td>
                   <Box>
                     <Text fontWeight="bold">Rodrigo Baggio</Text>
                     <Text fontSize="sm" color="gray.300">
@@ -71,6 +68,11 @@ export default function UserList() {
                   </Box>
                 </Td>
                 <Td>05 de janeiro de 2022</Td>
+                <Td px="6">
+                  <Text fontSize="sm" color="gray.500" fontWeight="bold">
+                    Inativo
+                  </Text>
+                </Td>
                 <Td>
                   <HStack spacing="2" mx="1" pr="4" py="1">
                     <Button
@@ -97,9 +99,6 @@ export default function UserList() {
                 </Td>
               </Tr>
               <Tr>
-                <Td px="6">
-                  <Checkbox colorScheme="pink" />
-                </Td>
                 <Td>
                   <Box>
                     <Text fontWeight="bold">Rodrigo Baggio</Text>
@@ -109,6 +108,11 @@ export default function UserList() {
                   </Box>
                 </Td>
                 <Td>05 de janeiro de 2022</Td>
+                <Td px="6">
+                  <Text fontSize="sm" color="pink.500" fontWeight="bold">
+                    Ativo
+                  </Text>
+                </Td>
                 <Td>
                   <HStack spacing="2" mx="1" pr="4" py="1">
                     <Button
@@ -135,9 +139,6 @@ export default function UserList() {
                 </Td>
               </Tr>
               <Tr>
-                <Td px="6">
-                  <Checkbox colorScheme="pink" />
-                </Td>
                 <Td>
                   <Box>
                     <Text fontWeight="bold">Rodrigo Baggio</Text>
@@ -147,6 +148,11 @@ export default function UserList() {
                   </Box>
                 </Td>
                 <Td>05 de janeiro de 2022</Td>
+                <Td px="6">
+                  <Text fontSize="sm" color="pink.500" fontWeight="bold">
+                    Ativo
+                  </Text>
+                </Td>
                 <Td>
                   <HStack spacing="2" mx="1" pr="4" py="1">
                     <Button
