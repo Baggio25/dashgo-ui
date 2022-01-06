@@ -21,6 +21,7 @@ import {
   RiPencilLine,
 } from "react-icons/ri";
 import { Header } from "../../components/Header";
+import { Pagination } from "../../components/Pagination";
 import { Sidebar } from "../../components/Sidebar";
 
 export default function UserList() {
@@ -50,9 +51,7 @@ export default function UserList() {
           <Table colorScheme="whiteAlpha">
             <Thead>
               <Tr>
-                <Th px="6" color="gray.300" width="8">
-                  <Checkbox colorScheme="pink" />
-                </Th>
+                <Th>Ativo</Th>
                 <Th>Usuário</Th>
                 <Th>Data de Cadastro</Th>
                 <Th width="8"></Th>
@@ -60,8 +59,8 @@ export default function UserList() {
             </Thead>
             <Tbody>
               <Tr>
-                <Td px="6">
-                  <Checkbox colorScheme="pink" />
+                <Td>
+                  <Checkbox colorScheme="pink" defaultIsChecked />
                 </Td>
                 <Td>
                   <Box>
@@ -175,6 +174,7 @@ export default function UserList() {
               </Tr>
             </Tbody>
           </Table>
+          <Pagination />
         </Box>
       </Flex>
     </Box>
