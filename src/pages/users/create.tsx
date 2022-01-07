@@ -17,6 +17,7 @@ import { RiTableLine } from "react-icons/ri";
 import { Header } from "../../components/Header";
 import { Sidebar } from "../../components/Sidebar";
 import { Input } from "../../components/Form/Input";
+import Link from "next/link";
 
 export default function UserCreate() {
   return (
@@ -30,16 +31,6 @@ export default function UserCreate() {
             <Heading size="lg" fontWeight="normal">
               Cadastro de Usuário
             </Heading>
-
-            <Button
-              as="a"
-              size="sm"
-              fontSize="sm"
-              colorScheme="pink"
-              leftIcon={<Icon as={RiTableLine} fontSize="20" />}
-            >
-              Busca
-            </Button>
           </Flex>
           <Divider my="6" borderColor="gray.700" />
           <VStack spacing="8">
@@ -62,7 +53,9 @@ export default function UserCreate() {
           </VStack>
           <Flex mt="8" justify="flex-end">
             <HStack spacing="4">
-              <Button colorScheme="whiteAlpha">Cancelar</Button>
+              <Link href="/users" passHref>
+                <Button colorScheme="whiteAlpha">Cancelar</Button>
+              </Link>
               <Button colorScheme="pink">Salvar</Button>
             </HStack>
           </Flex>

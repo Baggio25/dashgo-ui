@@ -17,17 +17,35 @@ export function SidebarNav() {
   return (
     <Stack spacing="12" align="flex-start">
       <NavSection title="GERAL">
-        <NavLink icon={RiDashboardLine}>Dashboard</NavLink>
-        <NavLink icon={RiDatabaseLine}>Históricos</NavLink>
-        <NavLink icon={RiGroupFill}>Pessoas</NavLink>
-        <NavLink icon={RiMoneyDollarCircleLine}>Contas</NavLink>
-        <NavLink icon={RiBankLine}>Bancos</NavLink>
-        <NavLink icon={RiContactsLine}>Usuários</NavLink>
+        <NavLink icon={RiDashboardLine} href="/dashboard">
+          Dashboard
+        </NavLink>
+        <NavLink icon={RiDatabaseLine} href="/historicos">
+          Históricos
+        </NavLink>
+        <NavLink icon={RiGroupFill} href="/pessoas">
+          Pessoas
+        </NavLink>
+        <NavLink icon={RiMoneyDollarCircleLine} href="/contas">
+          Contas
+        </NavLink>
+        <NavLink icon={RiBankLine} href="/bancos">
+          Bancos
+        </NavLink>
+        <NavLink icon={RiContactsLine} href="/users">
+          Usuários
+        </NavLink>
       </NavSection>
       <NavSection title="FINANCEIRO">
-        <NavLink icon={RiSafeLine}>Lançamentos</NavLink>
-        <NavLink icon={RiAddBoxLine}>Recebimentos</NavLink>
-        <NavLink icon={RiSubtractLine}>Pagamentos</NavLink>
+        <NavLink icon={RiSafeLine} href="/lancamentos">
+          Lançamentos
+        </NavLink>
+        <NavLink icon={RiAddBoxLine} href="/recebimento">
+          Recebimentos
+        </NavLink>
+        <NavLink icon={RiSubtractLine} href="/pagamentos">
+          Pagamentos
+        </NavLink>
       </NavSection>
     </Stack>
   );
