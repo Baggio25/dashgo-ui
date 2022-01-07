@@ -1,7 +1,6 @@
 import {
   Box,
   Button,
-  Checkbox,
   Flex,
   Heading,
   HStack,
@@ -13,18 +12,19 @@ import {
   Th,
   Thead,
   Tr,
+  useBreakpointValue,
 } from "@chakra-ui/react";
-import {
-  RiAddLine,
-  RiDeleteBackLine,
-  RiDeleteBinLine,
-  RiPencilLine,
-} from "react-icons/ri";
+import { RiAddLine, RiDeleteBinLine, RiPencilLine } from "react-icons/ri";
 import { Header } from "../../components/Header";
 import { Pagination } from "../../components/Pagination";
 import { Sidebar } from "../../components/Sidebar";
 
 export default function UserList() {
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    lg: true,
+  });
+
   return (
     <Box>
       <Header />
@@ -52,8 +52,8 @@ export default function UserList() {
             <Thead>
               <Tr>
                 <Th>Usuário</Th>
-                <Th>Data de Cadastro</Th>
-                <Th></Th>
+                {isWideVersion && <Th>Data de Cadastro</Th>}
+                <Th px={["4", "4", "6"]}>Status</Th>
                 <Th width="8"></Th>
               </Tr>
             </Thead>
@@ -67,8 +67,8 @@ export default function UserList() {
                     </Text>
                   </Box>
                 </Td>
-                <Td>05 de janeiro de 2022</Td>
-                <Td px="6">
+                {isWideVersion && <Td>05 de janeiro de 2022</Td>}
+                <Td px={["4", "4", "6"]}>
                   <Text fontSize="sm" color="gray.500" fontWeight="bold">
                     Inativo
                   </Text>
@@ -83,7 +83,7 @@ export default function UserList() {
                       color="gray.700"
                       leftIcon={<Icon as={RiPencilLine} />}
                     >
-                      Editar
+                      {isWideVersion ? "Editar" : ""}
                     </Button>
                     <Button
                       as="a"
@@ -93,87 +93,7 @@ export default function UserList() {
                       color="gray.100"
                       leftIcon={<Icon as={RiDeleteBinLine} />}
                     >
-                      Excluir
-                    </Button>
-                  </HStack>
-                </Td>
-              </Tr>
-              <Tr>
-                <Td>
-                  <Box>
-                    <Text fontWeight="bold">Rodrigo Baggio</Text>
-                    <Text fontSize="sm" color="gray.300">
-                      rodrigo.baggio.si@gmail.com
-                    </Text>
-                  </Box>
-                </Td>
-                <Td>05 de janeiro de 2022</Td>
-                <Td px="6">
-                  <Text fontSize="sm" color="pink.500" fontWeight="bold">
-                    Ativo
-                  </Text>
-                </Td>
-                <Td>
-                  <HStack spacing="2" mx="1" pr="4" py="1">
-                    <Button
-                      as="a"
-                      size="xs"
-                      fontSize="xs"
-                      colorScheme="gray"
-                      color="gray.700"
-                      leftIcon={<Icon as={RiPencilLine} />}
-                    >
-                      Editar
-                    </Button>
-                    <Button
-                      as="a"
-                      size="xs"
-                      fontSize="xs"
-                      colorScheme="red"
-                      color="gray.100"
-                      leftIcon={<Icon as={RiDeleteBinLine} />}
-                    >
-                      Excluir
-                    </Button>
-                  </HStack>
-                </Td>
-              </Tr>
-              <Tr>
-                <Td>
-                  <Box>
-                    <Text fontWeight="bold">Rodrigo Baggio</Text>
-                    <Text fontSize="sm" color="gray.300">
-                      rodrigo.baggio.si@gmail.com
-                    </Text>
-                  </Box>
-                </Td>
-                <Td>05 de janeiro de 2022</Td>
-                <Td px="6">
-                  <Text fontSize="sm" color="pink.500" fontWeight="bold">
-                    Ativo
-                  </Text>
-                </Td>
-                <Td>
-                  <HStack spacing="2" mx="1" pr="4" py="1">
-                    <Button
-                      as="a"
-                      size="xs"
-                      fontSize="xs"
-                      colorScheme="gray"
-                      color="gray.700"
-                      leftIcon={<Icon as={RiPencilLine} />}
-                    >
-                      Editar
-                    </Button>
-                    <Button
-                      as="a"
-                      size="xs"
-                      fontSize="xs"
-                      colorScheme="red"
-                      color="gray.100"
-                      leftIcon={<Icon as={RiDeleteBinLine} />}
-                    >
-                      Excluir
+                      {isWideVersion ? "Excluir" : ""}
                     </Button>
                   </HStack>
                 </Td>
