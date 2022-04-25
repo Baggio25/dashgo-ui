@@ -57,7 +57,6 @@ export default function UserList() {
               <Tr>
                 <Th>Usuário</Th>
                 {isWideVersion && <Th>Data de Cadastro</Th>}
-                <Th px={["4", "4", "6"]}>Status</Th>
                 <Th width="8"></Th>
               </Tr>
             </Thead>
@@ -72,11 +71,6 @@ export default function UserList() {
                   </Box>
                 </Td>
                 {isWideVersion && <Td>05 de janeiro de 2022</Td>}
-                <Td px={["4", "4", "6"]}>
-                  <Text fontSize="sm" color="gray.500" fontWeight="bold">
-                    Inativo
-                  </Text>
-                </Td>
                 <Td>
                   <HStack spacing="2" mx="1" pr="4" py="1">
                     <Button
